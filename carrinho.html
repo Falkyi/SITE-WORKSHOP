@@ -17,23 +17,34 @@
         <li><a href="contato.html">Contato</a></li>
       </ul>
     </nav>
+    <div style="position:relative;">
+      <button id="mini-cart-btn">🛒 Carrinho <span id="cart-count">0</span></button>
+      <div id="mini-cart" class="mini-cart" hidden>
+        <div id="mini-cart-items"></div>
+        <div id="mini-cart-total">Total: R$ 0,00</div>
+        <button onclick="alert('Compra finalizada!');">Finalizar Compra</button>
+      </div>
+    </div>
   </header>
 
   <main>
     <section id="lista-carrinho">
       <h2>Itens no Carrinho</h2>
-      <p>Seu carrinho está vazio.</p>
+      <p id="empty-cart">Seu carrinho está vazio.</p>
+      <div id="cart-items"></div>
     </section>
 
     <section id="resumo">
       <h2>Resumo</h2>
-      <p>Total: R$ 0,00</p>
-      <button>Finalizar Compra</button>
+      <p id="total-price">Total: R$ 0,00</p>
+      <button onclick="alert('Compra finalizada!');">Finalizar Compra</button>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Loja Online</p>
   </footer>
+
+  <script src="assets/js/app.js"></script>
 </body>
 </html>

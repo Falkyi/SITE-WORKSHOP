@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    <h1>Catálogo de Produtos</h1>
+    <h1>Loja Online</h1>
     <nav>
       <ul>
         <li><a href="index.html">Início</a></li>
@@ -17,27 +17,69 @@
         <li><a href="contato.html">Contato</a></li>
       </ul>
     </nav>
+    <div style="position:relative;">
+      <button id="mini-cart-btn">🛒 Carrinho <span id="cart-count">0</span></button>
+      <div id="mini-cart" class="mini-cart" hidden>
+        <div id="mini-cart-items"></div>
+        <div id="mini-cart-total">Total: R$ 0,00</div>
+        <button onclick="alert('Compra finalizada!');">Finalizar Compra</button>
+      </div>
+    </div>
   </header>
 
   <main>
     <section id="produtos">
-      <h2>Nossos Produtos</h2>
-      <article class="produto">
-        <h3>Produto 1</h3>
-        <p>Descrição do produto.</p>
-        <button>Adicionar ao carrinho</button>
-      </article>
+      <h2>Nosso Catálogo</h2>
+      <div style="display:flex; flex-wrap:wrap; gap:1rem;">
 
-      <article class="produto">
-        <h3>Produto 2</h3>
-        <p>Descrição do produto.</p>
-        <button>Adicionar ao carrinho</button>
-      </article>
+        <article class="produto">
+          <img src="assets/img/produto1.jpg" alt="Fone de Ouvido Bluetooth" style="width:150px; height:150px; object-fit:cover; border-radius:4px;">
+          <h3>Fone de Ouvido Bluetooth</h3>
+          <p>Fone sem fio com excelente qualidade de som.</p>
+          <p><strong>R$ 120,00</strong></p>
+          <button onclick="addToCart({id:'p1', title:'Fone de Ouvido Bluetooth', price:120, image:'assets/img/produto1.jpg'})">Adicionar ao carrinho</button>
+        </article>
+
+        <article class="produto">
+          <img src="assets/img/produto2.jpg" alt="Smartwatch Fitness" style="width:150px; height:150px; object-fit:cover; border-radius:4px;">
+          <h3>Smartwatch Fitness</h3>
+          <p>Monitoramento cardíaco, passos e notificações.</p>
+          <p><strong>R$ 250,00</strong></p>
+          <button onclick="addToCart({id:'p2', title:'Smartwatch Fitness', price:250, image:'assets/img/produto2.jpg'})">Adicionar ao carrinho</button>
+        </article>
+
+        <article class="produto">
+          <img src="assets/img/produto3.jpg" alt="Teclado Mecânico Gamer" style="width:150px; height:150px; object-fit:cover; border-radius:4px;">
+          <h3>Teclado Mecânico Gamer</h3>
+          <p>Teclas mecânicas RGB com alta durabilidade.</p>
+          <p><strong>R$ 350,00</strong></p>
+          <button onclick="addToCart({id:'p3', title:'Teclado Mecânico Gamer', price:350, image:'assets/img/produto3.jpg'})">Adicionar ao carrinho</button>
+        </article>
+
+        <article class="produto">
+          <img src="assets/img/produto4.jpg" alt="Caixa de Som Portátil" style="width:150px; height:150px; object-fit:cover; border-radius:4px;">
+          <h3>Caixa de Som Portátil</h3>
+          <p>Som potente, à prova d’água e bateria de longa duração.</p>
+          <p><strong>R$ 180,00</strong></p>
+          <button onclick="addToCart({id:'p4', title:'Caixa de Som Portátil', price:180, image:'assets/img/produto4.jpg'})">Adicionar ao carrinho</button>
+        </article>
+
+        <article class="produto">
+          <img src="assets/img/produto5.jpg" alt="Mouse Gamer RGB" style="width:150px; height:150px; object-fit:cover; border-radius:4px;">
+          <h3>Mouse Gamer RGB</h3>
+          <p>Alta precisão, design ergonômico e iluminação RGB.</p>
+          <p><strong>R$ 95,00</strong></p>
+          <button onclick="addToCart({id:'p5', title:'Mouse Gamer RGB', price:95, image:'assets/img/produto5.jpg'})">Adicionar ao carrinho</button>
+        </article>
+
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Loja Online</p>
+    <p>&copy; 2025 Loja Online - Todos os direitos reservados.</p>
   </footer>
+
+  <script src="assets/js/app.js"></script>
 </body>
 </html>

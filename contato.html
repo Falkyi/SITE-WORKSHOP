@@ -17,28 +17,39 @@
         <li><a href="contato.html">Contato</a></li>
       </ul>
     </nav>
+    <div style="position:relative;">
+      <button id="mini-cart-btn">🛒 Carrinho <span id="cart-count">0</span></button>
+      <div id="mini-cart" class="mini-cart" hidden>
+        <div id="mini-cart-items"></div>
+        <div id="mini-cart-total">Total: R$ 0,00</div>
+        <button onclick="alert('Compra finalizada!');">Finalizar Compra</button>
+      </div>
+    </div>
   </header>
 
   <main>
     <section id="form-contato">
       <h2>Entre em Contato</h2>
-      <form action="#" method="post">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
+      <form id="contact-form" action="#" method="post">
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" name="nome" required>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
+  <label for="email">E-mail:</label>
+  <input type="email" id="email" name="email" required>
 
-        <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" required></textarea>
+  <label for="mensagem">Mensagem:</label>
+  <textarea id="mensagem" name="mensagem" required></textarea>
 
-        <button type="submit">Enviar</button>
-      </form>
+  <button type="submit">Enviar</button>
+</form>
+<p id="form-response" style="margin-top:0.5rem; color:green;"></p>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Loja Online</p>
   </footer>
+
+  <script src="assets/js/app.js"></script>
 </body>
 </html>

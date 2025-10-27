@@ -1,39 +1,241 @@
-body {
-  font-family: Arial, sans-serif;
+/* ============================
+   RESET E BASE
+============================ */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* ============================
+   HEADER E NAVEGAÇÃO
+============================ */
 header {
-  background-color: #333;
-  color: white;
-  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #212121; /* header escuro */
+  color: #fff;
+  padding: 1rem 2rem;
+  position: relative;
 }
 
 header h1 {
-  margin: 0;
+  font-size: 1.8rem;
 }
 
 nav ul {
   list-style: none;
-  padding: 0;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 nav a {
-  color: white;
+  color: #fff;
   text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
+nav a:hover {
+  color: #ff9800; /* hover vibrante */
+}
+
+/* ============================
+   MINI-CART
+============================ */
+#mini-cart-btn {
+  background: linear-gradient(135deg, #ff5722, #ff9800);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#mini-cart-btn:hover {
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+}
+
+.mini-cart {
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  background-color: #fff;
+  color: #333;
+  width: 260px;
+  padding: 1rem;
+  border: 1px solid #ff5722;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(255, 87, 34, 0.2);
+  z-index: 10;
+}
+
+.mini-cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.mini-cart-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin-right: 0.5rem;
+  border-radius: 4px;
+}
+
+.mini-cart button {
+  width: 100%;
+  padding: 0.5rem;
+  background: linear-gradient(135deg, #ff5722, #ff9800);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.mini-cart button:hover {
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+}
+
+/* ============================
+   MAIN E SEÇÕES
+============================ */
 main {
-  padding: 1rem;
+  padding: 2rem;
 }
 
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
+section {
+  margin-bottom: 2rem;
+}
+
+section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #ff5722;
+}
+
+/* ============================
+   PRODUTOS (GRID)
+============================ */
+#produtos div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+.produto {
+  background-color: #fff;
   padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(255, 87, 34, 0.15);
+  width: 180px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 87, 34, 0.25);
+}
+
+.produto img {
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s;
+}
+
+.produto img:hover {
+  transform: scale(1.05);
+}
+
+.produto button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #ff5722, #ff9800);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.produto button:hover {
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  transform: scale(1.05);
+}
+
+/* ============================
+   FOOTER
+============================ */
+footer {
+  background-color: #212121;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
   margin-top: 2rem;
+}
+
+/* ============================
+   FORMULÁRIOS
+============================ */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+form input, form textarea {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #ff5722, #ff9800);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+form button:hover {
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  transform: scale(1.05);
+}
+
+/* ============================
+   RESPONSIVIDADE
+============================ */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  #produtos div {
+    justify-content: center;
+  }
 }

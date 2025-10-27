@@ -1,0 +1,42 @@
+[
+  {
+    "id": "p001",
+    "title": "Fone Bluetooth X1",
+    "price": 129.90,
+    "category": "Eletrônicos",
+    "image": "https://picsum.photos/seed/p1/600/400",
+    "description": "Fone sem fio com excelente autonomia e qualidade de som."
+  },
+  {
+    "id": "p002",
+    "title": "Smartwatch Sport",
+    "price": 249.00,
+    "category": "Wearables",
+    "image": "https://picsum.photos/seed/p2/600/400",
+    "description": "Monitoramento de batimentos, GPS e notificações."
+  },
+  {
+    "id": "p003",
+    "title": "Case Pro para Celular",
+    "price": 39.50,
+    "category": "Acessórios",
+    "image": "https://picsum.photos/seed/p3/600/400",
+    "description": "Capa resistente, toque macio e design moderno."
+  },
+  {
+    "id": "p004",
+    "title": "Carregador Turbo 30W",
+    "price": 79.90,
+    "category": "Acessórios",
+    "image": "https://picsum.photos/seed/p4/600/400",
+    "description": "Carregamento rápido para smartphones e tablets."
+  },
+  {
+    "id": "p005",
+    "title": "Caixa de Som Bluetooth",
+    "price": 199.90,
+    "category": "Eletrônicos",
+    "image": "https://picsum.photos/seed/p5/600/400",
+    "description": "Áudio potente, bateria longa e resistente à água."
+  }
+]

@@ -17,12 +17,31 @@
         <li><a href="contato.html">Contato</a></li>
       </ul>
     </nav>
+    <div style="position:relative;">
+      <button id="mini-cart-btn">🛒 Carrinho <span id="cart-count">0</span></button>
+      <div id="mini-cart" class="mini-cart" hidden>
+        <div id="mini-cart-items"></div>
+        <div id="mini-cart-total">Total: R$ 0,00</div>
+        <button onclick="alert('Compra finalizada!');">Finalizar Compra</button>
+      </div>
+    </div>
   </header>
 
   <main>
     <section id="destaques">
       <h2>Produtos em Destaque</h2>
-      <p>Confira nossos principais produtos e promoções.</p>
+      <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+        <article class="produto">
+          <h3>Produto 1</h3>
+          <p>Descrição do produto 1.</p>
+          <button onclick="addToCart({id:'p1', title:'Produto 1', price:50, image:''})">Adicionar ao carrinho</button>
+        </article>
+        <article class="produto">
+          <h3>Produto 2</h3>
+          <p>Descrição do produto 2.</p>
+          <button onclick="addToCart({id:'p2', title:'Produto 2', price:80, image:''})">Adicionar ao carrinho</button>
+        </article>
+      </div>
     </section>
 
     <section id="sobre">
@@ -34,5 +53,7 @@
   <footer>
     <p>&copy; 2025 Loja Online - Todos os direitos reservados.</p>
   </footer>
+
+  <script src="assets/js/app.js"></script>
 </body>
 </html>
